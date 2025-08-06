@@ -1,103 +1,116 @@
-import Image from "next/image";
+'use client';
+
+import Button from '@/components/Button';
+import FeatureItem from '@/components/FeatureItem';
+import PricingSection from '@/components/PricingSection';
+import Testimonials from '@/components/Testimonials';
+import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
+
+import {
+  Rocket,
+  Zap,
+  Code,
+  Database,
+  ShieldCheck,
+  Sparkles,
+} from 'lucide-react';
+
+const features = [
+  {
+    icon: Rocket,
+    title: "AI Campaigns",
+    description: "Launch and optimize marketing campaigns using generative AI.",
+  },
+  {
+    icon: Zap,
+    title: "1-Click Automations",
+    description: "Automate routine workflows and save hours of manual work.",
+  },
+  {
+    icon: Code,
+    title: "No-Code Builder",
+    description: "Create powerful tools with no coding skills needed.",
+  },
+  {
+    icon: Database,
+    title: "Smart Analytics",
+    description: "Visualize KPIs and user insights in real-time dashboards.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Secure & Compliant",
+    description: "Top-level security, GDPR and SOC2 compliance.",
+  },
+  {
+    icon: Sparkles,
+    title: "Personalized Content",
+    description: "Craft hyper-personalized content for your audience segments.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-[#fdf4ff] text-[#1f1f1f] font-sans">
+      
+      {/* Hero Section */}
+      <section className="py-28 text-center px-6 max-w-4xl">
+         <h1 className="text-lg md:text-xl font-extrabold text-gray-600 mb-2 tracking-wide uppercase">
+    ADmyBRAND AI Suite
+  </h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
+          Build AI Products <span className="text-pink-500">10x Faster</span>
+        </h1>
+        <p className="text-xl text-gray-700 mb-8">
+          Use our AI-powered developer suite to launch production-ready apps with minimal effort.
+        </p>
+        <Button className="bg-pink-500 hover:bg-pink-600 transition-all duration-200 text-white px-6 py-3 rounded-xl shadow-md">
+          Get Started
+        </Button>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Features Section */}
+      <section className="py-24 w-full max-w-7xl px-6">
+        <h2 className="text-4xl font-bold text-center mb-4">Features that Power Growth</h2>
+        <p className="text-center text-gray-600 mb-12">
+          Everything you need to launch, scale, and optimize with AI.
+        </p>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white bg-opacity-80 border border-pink-100 p-6 rounded-2xl hover:shadow-lg transition-all duration-300"
+            >
+              <FeatureItem {...feature} />
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="w-full bg-[#fff0f6] px-6 py-24">
+        <PricingSection />
+      </section>
+
+      {/* Testimonials */}
+      <section className="w-full px-6 py-20 bg-[#fce4ec]">
+        <Testimonials />
+      </section>
+
+      {/* FAQ */}
+      <section className="w-full px-6 py-20 bg-[#ffe4fa]">
+        <FAQSection />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 px-6 w-full bg-[#f9f0ff]">
+        <h2 className="text-4xl font-bold text-center mb-10">Contact Us</h2>
+        <ContactForm />
+      </section>
+
+      {/* Footer */}
+      <Footer />
+    </main>
   );
 }
