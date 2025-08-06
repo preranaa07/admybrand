@@ -1,40 +1,38 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ADmyBRAND AI Suite
 
-## Getting Started
+🚀 Build AI Products 10x Faster
 
-First, run the development server:
+ADmyBRAND AI Suite is a modern, frontend-only landing page for a fictional AI-powered developer toolkit, built using Next.js 14+, TypeScript, and Tailwind CSS. It showcases clean UI components, subtle animations, and responsive design trends from 2025.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👉 [Visit the live site](https://admybrand-seven-tau.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ✅ Next.js 14+
+- ✅ Tailwind CSS
+- ✅ TypeScript
+- ✅ Framer Motion
+- ✅ shadcn/ui
 
-## Learn More
+## 📁 Features
 
-To learn more about Next.js, take a look at the following resources:
+- Hero Section with CTA
+- Feature Highlights
+- Pricing Cards
+- Testimonials & FAQ
+- Responsive & Animated UI
+- 8+ Reusable Components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 AI Usage Report
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+See [AI_USAGE_REPORT.md](./AI_USAGE_REPORT.md)
 
-## Deploy on Vercel
+## 📸 Screenshots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+(You can add screenshots if you want)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# admybrand-ai-suite
->>>>>>> ae9578ee24190a4cc7691f549b89483b9f778d61
+## 📜 License
+
+MIT
